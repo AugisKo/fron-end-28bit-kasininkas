@@ -37,11 +37,9 @@ async function kasininkas(price, cash) {
   cashBack = cashSum - price;
   if (cashSum < price) {
     p = 'Nepakanka pinigu!';
-  }
-  if (cashSum === price) {
+  } else if (cashSum === price) {
     p = 'Aciu, jog pirkote!';
-  }
-  if (cashSum > price) {
+  } else {
     p = `Aciu, jog pirkote! Stai jusu graza - ${cashBack} pinigu!`;
   }
   console.log(`Priimtos kupiuros: ${receivedCash}`);
